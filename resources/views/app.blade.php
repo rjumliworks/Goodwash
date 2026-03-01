@@ -4,11 +4,11 @@
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <title inertia>TasweerHub</title>
-        <meta name="description" content="Photography">
+        <meta name="description" content="Goodwash">
         <meta name="keywords" content="Krad">
         <meta name="author" content="Krad">
-        <meta property="og:title" content="TasweerHub Photography">
-        <meta property="og:description" content="Photography">
+        <meta property="og:title" content="Goodwash">
+        <meta property="og:description" content="Car Wash">
         <meta property="og:image" content="URL to the template's logo or featured image">
         <meta property="og:url" content="URL to the template's webpage">
         <meta name="twitter:card" content="summary_large_image">
