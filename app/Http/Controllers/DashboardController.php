@@ -1,0 +1,41 @@
+<?php
+
+namespace App\Http\Controllers;
+
+use Illuminate\Http\Request;
+use App\Services\DropdownClass;
+use App\Services\Dashboard\PhotographerClass;
+
+class DashboardController extends Controller
+{
+    protected $dropdown, $photographer;
+
+    public function __construct(
+        DropdownClass $dropdown,
+        PhotographerClass $photographer
+    ){
+        $this->dropdown = $dropdown;
+        $this->photographer = $photographer;
+    }
+
+    public function index(Request $request){
+        if(!\Auth::check()){
+            return inertia('Auth/Login');
+        }else{
+            return inertia('Executive/Dashboard/Index');
+        }
+    }
+
+
+    public function search(Request $request){
+        $option = $request->option;
+        switch($option){
+            case 'tags':
+                return $this->dropdown->tags($request->keyword);
+            break;
+            case 'users':
+                return $this->dropdown->users($request->keyword);
+            break;
+        }
+    }
+}
